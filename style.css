@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+.form-wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 8px;
+    padding: 28px;
+}
+
+h1 {
+    margin: 0 0 8px 0;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.form-subtitle {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #d1d5db;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #374151;
+    background: #020617;
+    color: #e5e7eb;
+    transition: border 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+select[multiple] {
+    min-height: 150px;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 8px 0 4px 0;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 400;
+    color: #e5e7eb;
+    margin-bottom: 0;
+}
+
+.radio-group input[type="radio"],
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    background: #2563eb;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.error-box {
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    border: 1px solid #7f1d1d;
+    background: #2a0f12;
+    color: #fecaca;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.success-box {
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    border: 1px solid #14532d;
+    background: #0f1f17;
+    color: #bbf7d0;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.field-error {
+    margin-top: 6px;
+    color: #fca5a5;
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+.input-error {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 1px rgba(220, 38, 38, 0.25);
+}
+
+.group-error {
+    padding: 10px 12px;
+    border: 1px solid #7f1d1d;
+    border-radius: 6px;
+    background: rgba(127, 29, 29, 0.12);
+}
+
+.message-box {
+    max-width: 600px;
+    margin: 60px auto;
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 8px;
+    padding: 28px;
+    text-align: center;
+}
+
+.message-actions {
+    margin-top: 18px;
+}
+
+.message-actions a {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 6px;
+    background: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.message-actions a:hover {
+    background: #1d4ed8;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .form-wrapper,
+    .message-box {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .radio-group,
+    .checkbox-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+
+.top-bar h1 {
+    margin: 0;
+    text-align: left;
+}
+
+.top-link {
+    color: #93c5fd;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.top-link:hover {
+    text-decoration: underline;
+}
+
+.form-wrapper.small {
+    max-width: 420px;
+}
+
+.credentials {
+    margin: 18px 0;
+    padding: 14px;
+    border: 1px solid #334155;
+    background: #020617;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.message-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.message-actions a {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web backend: Задание 5</title>
+    <link rel="stylesheet" href="{{prefix}}/style.css">
+</head>
+<body>
+<div class="form-wrapper">
+    <div class="top-bar">
+        <h1>{{form_title}}</h1>
+        {{auth_block}}
+    </div>
+
+    <p class="form-subtitle">Заполните все обязательные поля</p>
+
+    <form method="POST" action="{{prefix}}/submit">
+        <div class="form-group">
+            <label for="name">ФИО</label>
+            <input type="text" id="name" name="name" class="{{name_error_class}}" value="{{name}}">
+            {{name_error_block}}
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" class="{{phone_error_class}}" value="{{phone}}">
+            {{phone_error_block}}
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" class="{{email_error_class}}" value="{{email}}">
+            {{email_error_block}}
+        </div>
+
+        <div class="form-group">
+            <label for="birth">Дата рождения</label>
+            <input type="date" id="birth" name="birth" class="{{birth_error_class}}" value="{{birth}}">
+            {{birth_error_block}}
+        </div>
+
+        <div class="form-group">
+            <label>Пол</label>
+            <div class="radio-group {{gender_error_class}}">
+                <label><input type="radio" name="gender" value="male" {{male_checked}}> Мужской</label>
+                <label><input type="radio" name="gender" value="female" {{female_checked}}> Женский</label>
+            </div>
+            {{gender_error_block}}
+        </div>
+
+        <div class="form-group">
+            <label for="languages">Любимые языки программирования</label>
+            <select id="languages" name="languages[]" multiple class="{{languages_error_class}}">
+                <option value="1" {{lang_1}}>Pascal</option>
+                <option value="2" {{lang_2}}>C</option>
+                <option value="3" {{lang_3}}>C++</option>
+                <option value="4" {{lang_4}}>JavaScript</option>
+                <option value="5" {{lang_5}}>PHP</option>
+                <option value="6" {{lang_6}}>Python</option>
+                <option value="7" {{lang_7}}>Java</option>
+                <option value="8" {{lang_8}}>Haskel</option>
+                <option value="9" {{lang_9}}>Clojure</option>
+                <option value="10" {{lang_10}}>Prolog</option>
+                <option value="11" {{lang_11}}>Scala</option>
+                <option value="12" {{lang_12}}>Go</option>
+            </select>
+            {{languages_error_block}}
+        </div>
+
+        <div class="form-group">
+            <label for="bio">Биография</label>
+            <textarea id="bio" name="bio" class="{{bio_error_class}}">{{bio}}</textarea>
+            {{bio_error_block}}
+        </div>
+
+        <div class="form-group">
+            <div class="checkbox-group {{agreement_error_class}}">
+                <label><input type="checkbox" name="agreement" {{agreement_checked}}> С контрактом ознакомлен(а)</label>
+            </div>
+            {{agreement_error_block}}
+        </div>
+
+        <button type="submit">{{button_text}}</button>
+    </form>
+</div>
+</body>
+</html>
